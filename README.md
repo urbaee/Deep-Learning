@@ -85,4 +85,4 @@ Dokumen ini merangkum hasil **Tahap 1 (Plain‑34 tanpa residual)** dan **Tahap 
 - Kurva training dapat dibangkitkan dari file history ini apabila diperlukan.
 
 **Referensi"**
-- ChatGPT: [Click here](https://chatgpt.com/share/68da46c1-1d20-8013-9dc8-074e5306abc0)
+- LLM: [Click here](https://chatgpt.com/share/68da46c1-1d20-8013-9dc8-074e5306abc0)
