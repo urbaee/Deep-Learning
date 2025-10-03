@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1759494183.65506 "d:/Coding/Deep-Learning/laporan/laporan_resnet34.tex" "laporan_resnet34.pdf" "laporan_resnet34" 1759494186.08187 0
+["pdflatex"] 1759494834.6199 "d:/Coding/Deep-Learning/laporan/laporan_resnet34.tex" "laporan_resnet34.pdf" "laporan_resnet34" 1759494838.81745 0
   "C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/ecbx0800.tfm" 993061952 3200 63efb90caaa95542f9901b8e62d76417 ""
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/ecbx1095.tfm" 993061956 3228 aacd2ac2d814480e4422ad7e830fd2d4 ""
@@ -237,16 +237,16 @@
   "C:/Users/Administrator/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1759256678 13247252 a3c7dbc8d951331c4d5508353f82f1b8 ""
   "Figure/ifitera-header.png" 1759413015 105262 7fe1bcaf31c1fe943ce3e952b4c15ef1 ""
   "d:/Coding/Deep-Learning/laporan/laporan_resnet34.tex" 1759494179 1174 c8ad33a77175c5480545b8eb779c8e13 ""
-  "header.tex" 1759494036 392 19be5f1895c21f1a3f8675b73973bbac ""
-  "laporan_resnet34.aux" 1759494185 3939 c2cd6d7ecff4a92f4445bb73f9822d29 "pdflatex"
-  "laporan_resnet34.out" 1759494185 3431 69834d664b54531094fc415890b271e2 "pdflatex"
+  "header.tex" 1759494503 429 893b962b3682c0674978dd2ffc90ee3b ""
+  "laporan_resnet34.aux" 1759494838 3939 c2cd6d7ecff4a92f4445bb73f9822d29 "pdflatex"
+  "laporan_resnet34.out" 1759494838 3431 69834d664b54531094fc415890b271e2 "pdflatex"
   "laporan_resnet34.tex" 1759494179 1174 c8ad33a77175c5480545b8eb779c8e13 ""
-  "metadata.tex" 1759490338 422 816ca026765b5c5f65ee3b1838e464ac ""
+  "metadata.tex" 1759494479 364 00ce8e2cea06f2a0cee948b921761b7c ""
   "preamble.tex" 1759494129 2281 f1be19c8c1690dfcab188f888d5e3af8 ""
   "sections/01-pendahuluan.tex" 1759492920 557 d47750e01f13bdb6fde60d2c6326922a ""
   "sections/02-metodologi.tex" 1759490338 2210 84d7fa2cc5654c4301ef7ee0b17ffba4 ""
   "sections/03-hasil-analisis.tex" 1759493522 10105 82e9dfb88871ef3945ea36c7f6411222 ""
-  "sections/04-referensi.tex" 1759492989 1051 07660e464d9ce55b4d31f478f36dd702 ""
+  "sections/04-referensi.tex" 1759494833 1051 07660e464d9ce55b4d31f478f36dd702 ""
   "sections/05-LLM-Chat.tex" 1759493006 1696 f8e77c5431034990354756865f55b256 ""
   (generated)
   "laporan_resnet34.aux"
