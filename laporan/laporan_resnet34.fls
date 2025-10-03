@@ -408,10 +408,10 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecbx0800.tfm
-INPUT C:\Users\Administrator\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT .\sections\03-hasil-analisis.tex
 INPUT .\sections\03-hasil-analisis.tex
 INPUT sections\03-hasil-analisis.tex
+INPUT C:\Users\Administrator\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT .\sections\04-referensi.tex
 INPUT .\sections\04-referensi.tex
 INPUT sections\04-referensi.tex
@@ -420,6 +420,9 @@ INPUT C:\Program Files\MiKTeX\tex\latex\bera\t1fvm.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\bera\t1fvm.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\bera\t1fvm.fd
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\bera\fvmr8t.tfm
+INPUT .\sections\05-LLM-Chat.tex
+INPUT .\sections\05-LLM-Chat.tex
+INPUT sections\05-LLM-Chat.tex
 INPUT C:\Program Files\MiKTeX\fonts\vf\public\bera\fvmr8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\bera\fvmr8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\base\8r.enc

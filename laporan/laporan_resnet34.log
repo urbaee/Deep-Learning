@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.1)  3 OCT 2025 18:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.1)  3 OCT 2025 19:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -855,11 +855,11 @@ Package hyperref Info: Link coloring ON on input line 21.
 
 \c@lstlisting=\count399
  (header.tex
-<Figure/ifitera-header.png, id=58, 1747.52875pt x 339.2675pt>
+<Figure/ifitera-header.png, id=78, 1747.52875pt x 339.2675pt>
 File: Figure/ifitera-header.png Graphic file (type png)
 <use Figure/ifitera-header.png>
 Package pdftex.def Info: Figure/ifitera-header.png  used on input line 3.
-(pdftex.def)             Requested size: 262.118pt x 50.88792pt.
+(pdftex.def)             Requested size: 192.22876pt x 37.31953pt.
 ) (sections/01-pendahuluan.tex) (sections/02-metodologi.tex
 Underfull \hbox (badness 10000) in paragraph at lines 52--52
 []|\T1/cmr/bx/n/8 Pre-activation
@@ -871,12 +871,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--56
  []
 
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (sections/03-hasil-analisis.tex
 
 [1
 Non-PDF special ignored!
 <special> header=psfrag.pro
 
-{C:/Users/Administrator/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./Figure/ifitera-header.png>]) (sections/03-hasil-analisis.tex
+{C:/Users/Administrator/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./Figure/ifitera-header.png>]
 
 [2]
 
@@ -901,6 +904,13 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `fvm' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+) (sections/05-LLM-Chat.tex
+
+[5{C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}]
+Overfull \hbox (13.77107pt too wide) in paragraph at lines 15--16
+[]\T1/cmr/m/n/10.95 Qwen AI: [][]$\T1/fvm/m/n/10.95 https : / / chat . qwen . ai / s / 5501a768-[]29c5-[]4745-[]8a1e-[]674b85f1c3b9 ? fev = 0 . 0 . 219$[][] 
+ []
+
 )
 
 Package caption Warning: Unused \captionsetup[figure] on input line 6.
@@ -908,8 +918,8 @@ See the caption package documentation for explanation.
 
 
 
-[5{C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}]
-runsystem(latexminted cleantemp  --timestamp 20251003181722 59A0BB3511C49E23E79E3A6291EBF0CF)...disabled (restricted).
+[6]
+runsystem(latexminted cleantemp  --timestamp 20251003192303 59A0BB3511C49E23E79E3A6291EBF0CF)...disabled (restricted).
 
  (laporan_resnet34.aux)
  ***********
@@ -917,20 +927,20 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
  ***********
 Package rerunfilecheck Info: File `laporan_resnet34.out' has not changed.
-(rerunfilecheck)             Checksum: A2A16156D7791CEE3E1496BBF8F07091;2283.
+(rerunfilecheck)             Checksum: 69834D664B54531094FC415890B271E2;3431.
  ) 
 Here is how much of TeX's memory you used:
- 33391 strings out of 468134
- 629144 string characters out of 5440783
- 1295559 words of memory out of 5000000
- 61406 multiletter control sequences out of 15000+600000
+ 33408 strings out of 468134
+ 629478 string characters out of 5440783
+ 1295567 words of memory out of 5000000
+ 61414 multiletter control sequences out of 15000+600000
  641392 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,11n,96p,3297b,613s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0800.pk> <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/bera/fvmr8a.pfb>
-Output written on laporan_resnet34.pdf (5 pages, 338914 bytes).
+Output written on laporan_resnet34.pdf (6 pages, 348048 bytes).
 PDF statistics:
- 549 PDF objects out of 1000 (max. 8388607)
- 44 named destinations out of 1000 (max. 500000)
- 7802 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 586 PDF objects out of 1000 (max. 8388607)
+ 50 named destinations out of 1000 (max. 500000)
+ 7842 words of extra memory for PDF output out of 10000 (max. 10000000)
 

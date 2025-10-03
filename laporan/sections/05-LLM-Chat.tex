@@ -1,0 +1,16 @@
+\section{Peran dan Kontribusi AI Assistant}
+
+\subsection{Prompt dan Masalah yang Diajukan}
+Pada proyek ini, AI Assistant digunakan untuk membantu implementasi Squeeze-and-Excitation (SE) Block dengan prompt mengenai cara mengintegrasikan channel attention mechanism ke dalam arsitektur ResNet34. AI juga diminta menjelaskan konsep pre-activation ResNet dan perbedaannya dengan ResNet standar untuk meningkatkan pemahaman teoritis kelompok.
+
+\subsection{Bagian Kode yang Dihasilkan/Dibantu AI}
+AI membantu menghasilkan implementasi awal SE Block yang kemudian diintegrasikan ke dalam model ResNet34, serta memberikan penjelasan mengenai struktur pre-activation pada residual connection. Selain itu, AI membantu menyusun struktur kode untuk visualisasi confusion matrix dan kurva akurasi/loss yang digunakan dalam analisis hasil eksperimen.
+
+\subsection{Verifikasi dan Modifikasi Output AI}
+Kelompok memverifikasi output AI dengan menjalankan kode secara bertahap dan membandingkan dengan paper ResNet original serta paper SE-Net untuk memastikan kesesuaian implementasi. Modifikasi dilakukan pada hyperparameter seperti reduction ratio pada SE Block (diubah menjadi 16) dan learning rate scheduler untuk mengoptimalkan performa model. Integrasi dilakukan dengan menyesuaikan dimensi tensor output SE Block agar kompatibel dengan arsitektur ResNet34 yang sudah ada, serta menambahkan logging untuk monitoring training process.
+
+\subsection{Link Percakapan dengan AI}
+\begin{itemize}
+    \item ChatGPT: \url{https://chatgpt.com/share/68da46c1-1d20-8013-9dc8-074e5306abc0}
+    \item Qwen AI: \url{https://chat.qwen.ai/s/5501a768-29c5-4745-8a1e-674b85f1c3b9?fev=0.0.219}
+\end{itemize}

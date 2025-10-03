@@ -214,5 +214,5 @@ SE-Preact & 13 & 97.63\% & 85.97\% & +21.7\% \\
     
     \item \textbf{SE-Preact}: Menggabungkan SE dan pre-activation menghasilkan performa yang konsisten tinggi \textbf{85.97\%}, tetapi tetap tidak bisa mengalahkan SE-ResNet standar. Ini menunjukkan bahwa pada kedalaman 34 layer, pre-activation tidak memberi tambahan manfaat signifikan ketika sudah ada SE-Block.
 
-    \item \textbf{Ukuran dataset berpengaruh}: Dengan dataset kecil (442 gambar training), regularisasi sangat penting. SE-Block secara alami bertindak sebagai regularizer lewat channel attention, sehingga model lebih tahan overfitting. Terbukti di epoch 15, ResNet standar jatuh ke \textbf{74.66\%}, sementara SE-ResNet justru mencapai puncak \textbf{87.33\%}.
+    \item \textbf{Ukuran dataset berpengaruh}: Dengan dataset kecil (1108 gambar), regularisasi sangat penting. SE-Block secara alami bertindak sebagai regularizer lewat channel attention, sehingga model lebih tahan overfitting. Terbukti di epoch 15, ResNet standar jatuh ke \textbf{74.66\%}, sementara SE-ResNet justru mencapai puncak \textbf{87.33\%}.
 \end{enumerate}
