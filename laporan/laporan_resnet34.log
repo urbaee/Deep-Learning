@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.1)  2 OCT 2025 21:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.1)  3 OCT 2025 18:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -23,7 +23,7 @@ File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen148
-) (C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty
+) (preamble.tex (C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
  (C:\Program Files\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
@@ -676,7 +676,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip75
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 30.
+Package hyperref Info: Option `colorlinks' set `true' on input line 26.
  (C:\Program Files\MiKTeX\tex/latex/caption\subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 238.
@@ -724,7 +724,7 @@ File: listings.cfg 2024/09/23 1.10c listings configuration
 Package: listings 2024/09/23 1.10c (Carsten Heinz)
 \c@thm=\count387
 \c@quest=\count388
- (C:\Program Files\MiKTeX\tex/latex/lipsum\lipsum.sty (C:\Program Files\MiKTeX\tex/latex/l3packages/l3keys2e\l3keys2e.sty (C:\Program Files\MiKTeX\tex/latex/l3kernel\expl3.sty
+) (metadata.tex) (C:\Program Files\MiKTeX\tex/latex/lipsum\lipsum.sty (C:\Program Files\MiKTeX\tex/latex/l3packages/l3keys2e\l3keys2e.sty (C:\Program Files\MiKTeX\tex/latex/l3kernel\expl3.sty
 Package: expl3 2025-07-20 L3 programming layer (loader) 
  (C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
@@ -741,24 +741,24 @@ Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
 ) (laporan_resnet34.aux)
 \openout1 = `laporan_resnet34.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
  (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count393
@@ -783,13 +783,13 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \microtypecontext on input line 105.
-Package microtype Info: Applying patch `item' on input line 105.
-Package microtype Info: Applying patch `toc' on input line 105.
-Package microtype Info: Applying patch `eqnum' on input line 105.
-Package microtype Info: Applying patch `footnote' on input line 105.
-Package microtype Info: Applying patch `verbatim' on input line 105.
-LaTeX Info: Redefining \microtypesetup on input line 105.
+LaTeX Info: Redefining \microtypecontext on input line 21.
+Package microtype Info: Applying patch `item' on input line 21.
+Package microtype Info: Applying patch `toc' on input line 21.
+Package microtype Info: Applying patch `eqnum' on input line 21.
+Package microtype Info: Applying patch `footnote' on input line 21.
+Package microtype Info: Applying patch `verbatim' on input line 21.
+LaTeX Info: Redefining \microtypesetup on input line 21.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -800,19 +800,19 @@ Package microtype Info: No adjustment of character kerning.
  (C:\Program Files\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 105.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 21.
  (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (C:\Program Files\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 105.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 21.
  (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (C:\Program Files\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-Package xypdf Info: Line width: 0.43799pt on input line 105.
+Package xypdf Info: Line width: 0.43799pt on input line 21.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -848,20 +848,26 @@ Package xypdf Info: Line width: 0.43799pt on input line 105.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 105.
+Package hyperref Info: Link coloring ON on input line 21.
 (laporan_resnet34.out) (laporan_resnet34.out)
 \@outlinefile=\write7
 \openout7 = `laporan_resnet34.out'.
 
 \c@lstlisting=\count399
-<Figure/ifitera-header.png, id=82, 1747.52875pt x 339.2675pt>
+ (header.tex
+<Figure/ifitera-header.png, id=58, 1747.52875pt x 339.2675pt>
 File: Figure/ifitera-header.png Graphic file (type png)
 <use Figure/ifitera-header.png>
-Package pdftex.def Info: Figure/ifitera-header.png  used on input line 108.
+Package pdftex.def Info: Figure/ifitera-header.png  used on input line 3.
 (pdftex.def)             Requested size: 262.118pt x 50.88792pt.
+) (sections/01-pendahuluan.tex) (sections/02-metodologi.tex
+Underfull \hbox (badness 10000) in paragraph at lines 52--52
+[]|\T1/cmr/bx/n/8 Pre-activation
+ []
 
-Overfull \hbox (13.44485pt too wide) in paragraph at lines 162--164
-[]\T1/cmr/bx/n/10.95 Pre-activation ResNet-34\T1/cmr/m/n/10.95 : Ubah uru-tan men-jadi BN-ReLU-Conv-BN-ReLU-Conv (pre-activation),
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
+[]|\T1/cmr/bx/n/8 SE-Preact
  []
 
 
@@ -870,63 +876,40 @@ Overfull \hbox (13.44485pt too wide) in paragraph at lines 162--164
 Non-PDF special ignored!
 <special> header=psfrag.pro
 
-{C:/Users/Administrator/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./Figure/ifitera-header.png>]
-<../runs/plain34/loss_curve.png, id=100, 578.16pt x 361.35pt>
-File: ../runs/plain34/loss_curve.png Graphic file (type png)
-<use ../runs/plain34/loss_curve.png>
-Package pdftex.def Info: ../runs/plain34/loss_curve.png  used on input line 196.
-(pdftex.def)             Requested size: 232.17242pt x 145.10535pt.
-<../runs/plain34/acc_curve.png, id=101, 578.16pt x 361.35pt>
-File: ../runs/plain34/acc_curve.png Graphic file (type png)
-<use ../runs/plain34/acc_curve.png>
-Package pdftex.def Info: ../runs/plain34/acc_curve.png  used on input line 201.
-(pdftex.def)             Requested size: 232.17242pt x 145.10535pt.
-LaTeX Font Info:    Trying to load font information for T1+fvm on input line 211.
- (C:\Program Files\MiKTeX\tex/latex/bera\t1fvm.fd
-File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
-)
-LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 9.85492pt on input line 211.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `fvm' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
+{C:/Users/Administrator/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./Figure/ifitera-header.png>]) (sections/03-hasil-analisis.tex
 
-Overfull \hbox (2.5768pt too wide) in paragraph at lines 211--213
-\T1/cmr/bx/n/10.95 Modifikasi\T1/cmr/m/n/10.95 : Menam-bahkan resid-ual con-nec-tion pada for-ward pass: \T1/fvm/m/n/10.95 out = F.relu(out + identity)\T1/cmr/m/n/10.95 .
- []
+[2]
 
-<../runs/resnet34/loss_curve.png, id=102, 578.16pt x 361.35pt>
-File: ../runs/resnet34/loss_curve.png Graphic file (type png)
-<use ../runs/resnet34/loss_curve.png>
-Package pdftex.def Info: ../runs/resnet34/loss_curve.png  used on input line 217.
-(pdftex.def)             Requested size: 232.17242pt x 145.10535pt.
-<../runs/resnet34/acc_curve.png, id=103, 578.16pt x 361.35pt>
-File: ../runs/resnet34/acc_curve.png Graphic file (type png)
-<use ../runs/resnet34/acc_curve.png>
-Package pdftex.def Info: ../runs/resnet34/acc_curve.png  used on input line 222.
-(pdftex.def)             Requested size: 232.17242pt x 145.10535pt.
-
-
-[2{C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc} <../runs/plain34/loss_curve.png> <../runs/plain34/acc_curve.png> <../runs/resnet34/loss_curve.png> <../runs/resnet34/acc_curve.png>] (C:\Program Files\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2024/09/23 1.10c listings language file
-)
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 242.
-LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 242.
-
-Overfull \hbox (18.95212pt too wide) in paragraph at lines 293--294
-[]\T1/cmr/m/n/10.95 SGD+Nesterov: lr=0.1 (den-gan step de-cay 0.1 se-tiap 10 epochs), mo-men-tum=0.9, weight_decay=$\OT1/cmr/m/n/10.95 1 \OMS/cmsy/m/n/10.95 ^^B
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
 [3]
 
-[4]
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[5]
-runsystem(latexminted cleantemp  --timestamp 20251002215909 59A0BB3511C49E23E79E3A6291EBF0CF)...disabled (restricted).
+
+
+[4]) (sections/04-referensi.tex
+LaTeX Font Info:    Trying to load font information for T1+fvm on input line 12.
+ (C:\Program Files\MiKTeX\tex/latex/bera\t1fvm.fd
+File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
+)
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 9.85492pt on input line 12.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `fvm' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+)
+
+Package caption Warning: Unused \captionsetup[figure] on input line 6.
+See the caption package documentation for explanation.
+
+
+
+[5{C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}]
+runsystem(latexminted cleantemp  --timestamp 20251003181722 59A0BB3511C49E23E79E3A6291EBF0CF)...disabled (restricted).
 
  (laporan_resnet34.aux)
  ***********
@@ -934,20 +917,20 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
  ***********
 Package rerunfilecheck Info: File `laporan_resnet34.out' has not changed.
-(rerunfilecheck)             Checksum: 5755A9FCD9701B32B21EE9A7E5C21326;3438.
+(rerunfilecheck)             Checksum: A2A16156D7791CEE3E1496BBF8F07091;2283.
  ) 
 Here is how much of TeX's memory you used:
- 33877 strings out of 468134
- 634127 string characters out of 5440783
- 1648159 words of memory out of 5000000
- 61893 multiletter control sequences out of 15000+600000
- 644671 words of font info for 91 fonts, out of 8000000 for 9000
+ 33391 strings out of 468134
+ 629144 string characters out of 5440783
+ 1295559 words of memory out of 5000000
+ 61406 multiletter control sequences out of 15000+600000
+ 641392 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,11n,93p,3276b,1334s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/bera/fvmr8a.pfb>
-Output written on laporan_resnet34.pdf (5 pages, 600686 bytes).
+ 90i,11n,96p,3297b,613s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0800.pk> <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/bera/fvmr8a.pfb>
+Output written on laporan_resnet34.pdf (5 pages, 338914 bytes).
 PDF statistics:
- 541 PDF objects out of 1000 (max. 8388607)
- 60 named destinations out of 1000 (max. 500000)
- 10430 words of extra memory for PDF output out of 12000 (max. 10000000)
+ 549 PDF objects out of 1000 (max. 8388607)
+ 44 named destinations out of 1000 (max. 500000)
+ 7802 words of extra memory for PDF output out of 10000 (max. 10000000)
 

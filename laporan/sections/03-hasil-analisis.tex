@@ -1,0 +1,218 @@
+\section{Hasil dan Analisis}
+
+\subsection{Q1: Apa itu Degradation Problem?}
+
+Degradation adalah masalah di mana jaringan yang lebih dalam justru memberikan hasil
+lebih buruk daripada jaringan yang lebih dangkal. Ini bukan masalah overfitting (model terlalu menghafal
+data training), melainkan model kesulitan untuk belajar sama sekali. Akurasi training-nya sendiri sudah
+rendah, bukan cuma akurasi validasi
+
+\textbf{Bukti Empiris (Plain-34)}:
+
+\begin{table}[h]
+\centering
+\caption{Performa Plain-34 - Bukti Degradation}
+\scriptsize
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Epoch} & \textbf{Train Loss} & \textbf{Train Acc} & \textbf{Val Loss} & \textbf{Val Acc} \\
+\hline
+1  & 1.618 & 20.86\% & 1.611 & 19.91\% \\
+5  & 1.567 & 25.48\% & 1.710 & 28.96\% \\
+10 & 1.120 & 52.99\% & 1.162 & 57.01\% \\
+14 & 0.826 & 68.09\% & 0.877 & \textbf{70.59\%} \\
+15 & 0.841 & 67.87\% & 1.138 & 61.54\% \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Analisis Degradation}:
+\begin{enumerate}
+    \item \textbf{Susah Belajar}: Plain-34 tidak mampu menurunkan train loss cukup rendah, tanda optimizer kesulitan
+
+    \item \textbf{Performa Anjlok Parah}: Terjadi collapse di epoch 15, akurasi validasi turun drastis dan loss naik
+    
+    \item \textbf{Belajar Tidak Stabil}: Val loss berfluktuasi tajam, training tidak konsisten
+    
+    \item \textbf{Generalisasi Buruk}: Akurasi validasi rendah, hanya sedikit lebih baik dari tebak acak
+\end{enumerate}
+
+\textbf{Penyebab Degradation}:
+\begin{enumerate}
+    \item \textbf{Vanishing Gradient}: Pada jaringan yang sangat dalam, sinyal error yang dikirim balik dari output ke layer awal makin lama makin melemah. Akibatnya, layer awal tidak mendapatkan informasi yang cukup jelas untuk memperbaiki bobotnya
+    \item \textbf{Optimization Difficulty}: Plain-34 punya parameter yang sangat banyak. Proses penyesuaian semua parameter ini sekaligus membuat optimizer kesulitan menemukan kombinasi yang baik, sehingga sering terjebak di solusi yang kurang optimal
+    \item \textbf{Information Loss}: Karena data terus-menerus ditransformasi lewat banyak layer, informasi penting dari input awal semakin hilang atau berubah. Akhirnya, layer terakhir menerima representasi yang sudah terlalu jauh dari bentuk aslinya, sehingga pembelajaran menjadi lebih sulit
+\end{enumerate}
+
+\FloatBarrier
+
+\subsection{Q2: Bagaimana Residual Connection Mengatasi Degradation?}
+
+Residual connection bekerja dengan cara melewatkan informasi asli dari input langsung ke layer yang lebih dalam melalui skip connection. Mekanisme ini membantu menjaga informasi penting tidak hilang dan membuat aliran gradient tetap kuat saat backpropagation, sehingga jaringan yang lebih dalam bisa dilatih tanpa mengalami masalah degradasi performa
+
+\textbf{Bukti Efektivitas (ResNet-34 vs Plain-34)}:
+
+\begin{table}[h]
+\centering
+\caption{Perbandingan ResNet-34 vs Plain-34}
+\scriptsize
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Epoch} & \textbf{ResNet Train Acc} & \textbf{Plain Train Acc} & \textbf{ResNet Val Acc} & \textbf{Plain Val Acc} \\
+\hline
+1  & 32.24\% & 20.86\% & 29.41\% & 19.91\% \\
+5  & 81.06\% & 25.48\% & 66.97\% & 28.96\% \\
+8  & 90.42\% & 44.08\% & 80.09\% & 52.04\% \\
+10 & 91.66\% & 52.99\% & 80.09\% & 57.01\% \\
+13 & 96.96\% & 63.92\% & 81.00\% & 64.71\% \\
+14 & \textbf{97.29\%} & 68.09\% & \textbf{83.71\%} & 70.59\% \\
+15 & 97.07\% & 67.87\% & 74.66\% & 61.54\% \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Key Improvements}:
+\begin{enumerate}
+    \item \textbf{Akurasi jauh lebih tinggi}: ResNet jauh mengungguli Plain di train dan val acc
+    
+    \item \textbf{Lebih Cepat Konvergen}: ResNet capai performa baik dalam beberapa epoch, Plain lambat
+    
+    \item \textbf{Training Lebih Stabil}: Loss ResNet turun mulus, Plain fluktuatif
+    
+    \item \textbf{Tidak Collapse Parah}: ResNet hanya drop wajar, Plain jatuh drastis
+\end{enumerate}
+
+\textbf{Mengapa Residual Connection Bekerja?}
+
+\textbf{1. Gradient Highway}: Skip connection memberi jalur langsung bagi gradient sehingga tidak mudah hilang
+
+\textbf{2. Identity Mapping}: Jika blok gagal belajar, jaringan tetap bisa meneruskan input apa adanya, jadi tidak lebih buruk dari model dangkal
+
+\textbf{3. Mudah Dioptimasi}: Lebih gampang belajar perubahan kecil dari input (residual) daripada belajar pemetaan penuh
+
+\textbf{4. Ensemble Effect}: Skip connection menciptakan banyak jalur belajar, membuat training lebih kuat dan stabil
+
+\FloatBarrier
+
+\subsection{Q3: Analisis Modifikasi Arsitektur}
+
+\subsubsection{Pre-activation ResNet-34}
+
+\textbf{Modifikasi}:
+
+\begin{table}[h]
+\centering
+\caption{Perbedaan Standard vs Pre-activation ResNet}
+\scriptsize
+\begin{tabular}{|l|p{10cm}|}
+\hline
+\textbf{Arsitektur} & \textbf{Block Structure} \\
+\hline
+Standard ResNet & Conv-BN-ReLU-Conv-BN $+$ skip $\rightarrow$ ReLU \\
+\hline
+Pre-activation ResNet & BN-ReLU-Conv-BN-ReLU-Conv $+$ skip (no activation after add) \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Pre-activation vs Standard ResNet-34}
+\scriptsize
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Epoch} & \textbf{Preact Train} & \textbf{Std Train} & \textbf{Preact Val} & \textbf{Std Val} \\
+\hline
+1  & 35.63\% & 32.24\% & 41.63\% & 29.41\% \\
+5  & 78.24\% & 81.06\% & 67.87\% & 66.97\% \\
+10 & 92.78\% & 91.66\% & 81.45\% & 80.09\% \\
+11 & 96.39\% & 93.80\% & 85.52\% & 80.54\% \\
+13 & 97.63\% & 96.96\% & \textbf{85.97\%} & 80.99\% \\
+14 & \textbf{97.63\%} & \textbf{97.29\%} & 81.45\% & \textbf{83.71\%} \\
+15 & 97.29\% & 97.07\% & 80.54\% & 74.66\% \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Hasil}: Pre-activation lebih stabil di tengah training, tapi standard ResNet memberi akurasi puncak lebih tinggi
+
+\textbf{Analisis}: Untuk jaringan sedang seperti ResNet-34, skip connection biasa sudah cukup, sehingga keunggulan pre-activation belum terlalu terasa
+
+\subsubsection{SE-ResNet-34}
+
+\textbf{Mekanisme}: Squeeze-and-Excitation bekerja dengan merangkum informasi tiap channel, lalu mempelajari seberapa penting masing-masing channel, dan akhirnya menyesuaikan bobotnya sehingga fitur yang relevan dikuatkan dan yang kurang penting dilemahkan
+
+\begin{table}[h]
+\centering
+\caption{SE-ResNet-34 vs Standard ResNet-34}
+\scriptsize
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Epoch} & \textbf{SE Train} & \textbf{Std Train} & \textbf{SE Val} & \textbf{Std Val} \\
+\hline
+1  & 33.37\% & 32.24\% & 42.53\% & 29.41\% \\
+5  & 78.47\% & 81.06\% & 59.28\% & 66.97\% \\
+10 & 92.67\% & 91.66\% & 61.54\% & 80.09\% \\
+14 & 95.94\% & 97.29\% & 82.81\% & \textbf{83.71\%} \\
+15 & \textbf{96.05\%} & \textbf{97.07\%} & \textbf{87.33\%} & 74.66\% \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Hasil Menarik}: SE-ResNet mencapai akurasi validasi tertinggi \textbf{87.33\%} dan lebih tahan terhadap overfitting dibanding ResNet standar
+
+\textbf{Analisis}:
+SE-Block membantu generalisasi dengan fokus pada fitur penting, meski awalnya training agak tidak stabil. Pada tahap akhir, recalibration channel memberi keuntungan besar dengan tambahan parameter yang sangat kecil.
+
+\subsubsection{SE + Pre-activation}
+
+\textbf{Kombinasi}: SE-Block + Pre-activation ResNet-34.
+
+\begin{table}[h]
+\centering
+\caption{SE-Preact vs SE-Standard}
+\scriptsize
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Epoch} & \textbf{SE-Preact Train} & \textbf{SE-Std Train} & \textbf{SE-Preact Val} & \textbf{SE-Std Val} \\
+\hline
+14 & 98.31\% & 95.94\% & 83.26\% & 82.81\% \\
+15 & 97.52\% & 96.05\% & \textbf{81.45\%} & \textbf{87.33\%} \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Hasil}: SE-Preact performanya lebih rendah dibanding SE-Standard, sehingga pada dataset ini penambahan pre-activation tidak memberi keuntungan berarti
+
+\FloatBarrier
+
+\subsection{Q4: Perbandingan Komprehensif}
+
+\begin{table}[h]
+\centering
+\caption{Summary Semua Model (Best Performance)}
+\scriptsize
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Model} & \textbf{Best Epoch} & \textbf{Train Acc} & \textbf{Val Acc} & \textbf{Gain vs Plain} \\
+\hline
+Plain-34 & 14 & 68.09\% & 70.59\% & - \\
+ResNet-34 & 14 & 97.29\% & 83.71\% & +18.6\% \\
+Pre-activation & 11 & 96.39\% & \textbf{85.52\%} & +21.1\% \\
+SE-ResNet & 15 & 96.05\% & 87.33\% & \textbf{+23.7\%} \\
+SE-Preact & 13 & 97.63\% & 85.97\% & +21.7\% \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Analisis Detail}:
+\begin{enumerate}
+    \item \textbf{Residual Connection Menjadi Kunci Utama}: Pada Plain-34, model gagal belajar dengan baik, akurasi validasi hanya \textbf{70.59\%} dan training \textbf{68.09\%}. Dengan Residual Connection, performa langsung melonjak ke \textbf{83.71\%} validasi dan \textbf{97.29\%} training. Ini membuktikan bahwa skip connection bukan sekadar trik, tapi solusi fundamental untuk degradasi
+    \item \textbf{SE-Block paling unggul}: Model SE-ResNet mencatat akurasi validasi tertinggi \textbf{87.33\%} di epoch 15. Mekanisme channel attention membuat model lebih fokus ke fitur penting sehingga lebih tahan terhadap noise dan overfitting
+    
+    \item \textbf{Pre-activation unggul di pertengahan training}: ResNet dengan pre-activation sempat mengungguli ResNet standar di epoch 11 \textbf{85.52\% vs 80.54\%}. Namun, menjelang akhir training ResNet standar justru melampaui \textbf{83.71\% vs 81.45\%}
+    
+    \item \textbf{SE-Preact}: Menggabungkan SE dan pre-activation menghasilkan performa yang konsisten tinggi \textbf{85.97\%}, tetapi tetap tidak bisa mengalahkan SE-ResNet standar. Ini menunjukkan bahwa pada kedalaman 34 layer, pre-activation tidak memberi tambahan manfaat signifikan ketika sudah ada SE-Block.
+
+    \item \textbf{Ukuran dataset berpengaruh}: Dengan dataset kecil (442 gambar training), regularisasi sangat penting. SE-Block secara alami bertindak sebagai regularizer lewat channel attention, sehingga model lebih tahan overfitting. Terbukti di epoch 15, ResNet standar jatuh ke \textbf{74.66\%}, sementara SE-ResNet justru mencapai puncak \textbf{87.33\%}.
+\end{enumerate}

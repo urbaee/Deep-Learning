@@ -1,0 +1,59 @@
+\section{Metodologi}
+
+\subsection{Setup Eksperimen}
+\begin{table}[h]
+\centering
+\caption{Setup Eksperimen}
+\scriptsize
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Parameter} & \textbf{Value} \\
+\hline
+\multicolumn{2}{|c|}{\textbf{Training Hyperparameters}} \\
+\hline
+Epochs & 15 \\
+Batch Size & 32 \\
+Learning Rate & $1 \times 10^{-4}$ \\
+Optimizer & AdamW \\
+Weight Decay & $1 \times 10^{-4}$ \\
+Loss Function & CrossEntropyLoss \\
+\hline
+\multicolumn{2}{|c|}{\textbf{Data Preprocessing}} \\
+\hline
+Image Size & 224 $\times$ 224 \\
+RandomHorizontalFlip & p = 0.5 \\
+ColorJitter & brightness/contrast/saturation = 0.2 \\
+Normalization Mean & [0.485, 0.456, 0.406] \\
+Normalization Std & [0.229, 0.224, 0.225] \\
+\hline
+\multicolumn{2}{|c|}{\textbf{Hardware \& Reproducibility}} \\
+\hline
+Device & CUDA GPU \\
+Precision & Mixed (fp16/bf16) \\
+Random Seed & 42 \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Arsitektur Model}
+
+\begin{table}[h]
+\centering
+\caption{Arsitektur Model yang Diuji}
+\scriptsize
+\begin{tabular}{|p{2.5cm}|>{\raggedright\arraybackslash}p{11cm}|}
+\hline
+\textbf{Model} & \textbf{Deskripsi Arsitektur} \\
+\hline
+\textbf{Plain-34} & Jaringan dasar 34 layer tanpa skip connection. Setiap blok berisi dua Conv3x3 dengan BN dan ReLU. Karena tidak ada shortcut, model sulit dilatih saat semakin dalam \\
+\hline
+\textbf{ResNet-34} & Sama dengan Plain-34, tapi setiap blok punya skip connection ($x+F(x)$). Fitur utama adalah shortcut yang menjaga aliran informasi dan gradient, sehingga training lebih stabil \\
+\hline
+\textbf{Pre-activation ResNet-34} & Modifikasi ResNet-34 dengan urutan BN-ReLU sebelum Conv, serta tanpa aktivasi setelah penjumlahan skip \\
+\hline
+\textbf{SE-ResNet-34} & ResNet-34 yang ditambah modul Squeeze-and-Excitation. Modul ini memberi perhatian (attention) pada channel penting, memperkuat fitur relevan, dan hanya menambah parameter sedikit ($<1\%$). \\
+\hline
+\textbf{SE-Preact ResNet-34} & Kombinasi pre-activation block dengan SE module. Tujuannya menggabungkan jalur gradient yang lebih bersih dengan channel attention, meski pada depth 34 layer keuntungannya terbatas. \\
+\hline
+\end{tabular}
+\end{table}
