@@ -21,7 +21,7 @@ class CFG:
     data_root: Path = Path("datasettubes")
     train_csv: str  = "train.csv"
     img_dir: str    = "train"
-    outdir: Path    = Path("runs/resnet34")  # ganti nama folder sesuai optimizer, fungsi, atau kebutuhan lain.
+    outdir: Path    = Path("runs/resnet34(pre-activation)")  # ganti nama folder sesuai optimizer, fungsi, atau kebutuhan lain.
 
     # training
     epochs: int     = 15
@@ -56,7 +56,6 @@ class CSVImageDataset(Dataset):
             im = self.transform(im)
         return im, y
 
-
 def stratified_split(df: pd.DataFrame, val_ratio=0.2, seed=42):
     rng = np.random.default_rng(seed)
     idx_tr, idx_va = [], []
@@ -73,11 +72,12 @@ class ResidualBlock(nn.Module):
     """BasicBlock ResNet-v1: Conv-BN-ReLU -> Conv-BN -> +skip -> ReLU"""
     def __init__(self, in_c, out_c, stride=1):
         super().__init__()
+        # -- Pre-activation --:
+        self.bn1   = nn.BatchNorm2d(in_c)
         self.conv1 = nn.Conv2d(in_c, out_c, 3, stride=stride, padding=1, bias=False)
-        self.bn1   = nn.BatchNorm2d(out_c)
-        self.conv2 = nn.Conv2d(out_c, out_c, 3, padding=1, bias=False)
         self.bn2   = nn.BatchNorm2d(out_c)
-
+        self.conv2 = nn.Conv2d(out_c, out_c, 3, padding=1, bias=False)
+        
         self.proj = None
         if stride != 1 or in_c != out_c:
             self.proj = nn.Sequential(
@@ -86,14 +86,18 @@ class ResidualBlock(nn.Module):
             )
 
     def forward(self, x):
+        # -- Pre-activation --:
         identity = x
-        out = F.relu(self.bn1(self.conv1(x)))
-        out = self.bn2(self.conv2(out))
+        out = F.relu(self.bn1(x), inplace=True)
+        out = self.conv1(out)
+        out = F.relu(self.bn2(out), inplace=True)
+        out = self.conv2(out)
         if self.proj is not None:
             identity = self.proj(identity)
-        out = F.relu(out + identity)  # residual sum + ReLU
+            
+        out = out + identity  # residual sum
         return out
-    
+
 class ResNet34(nn.Module):
     """Konfigurasi ResNet-34: [3,4,6,3] dengan channel [64,128,256,512]"""
     def __init__(self, num_classes):
@@ -291,7 +295,7 @@ def main():
     # AdamW Optimizer
     optimizer = torch.optim.AdamW(model.parameters(), lr=cfg.lr, weight_decay=cfg.weight_decay)
     # SGD + Nesterov
-    #optimizer = torch.optim.SGD(model.parameters(), lr=cfg.lr, momentum=0.9, weight_decay=cfg.weight_decay, nesterov=True)
+    # optimizer = torch.optim.SGD(model.parameters(), lr=cfg.lr, momentum=0.9, weight_decay=cfg.weight_decay, nesterov=True)
     scaler = torch.cuda.amp.GradScaler(enabled=torch.cuda.is_available())
 
     # train
