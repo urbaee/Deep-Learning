@@ -54,14 +54,14 @@ Dokumen ini merangkum hasil **Tahap 1 (Plain‑34 tanpa residual)** dan **Tahap 
 
 ## Plot History
 ### Plain-34 (tanpa residual)
-![Plain-34 — Loss](..\runs\plot\plain34_loss_curve.png)
-![Plain-34 — Accuracy](..\runs\plot\plain34_acc_curve.png)
-![Plain-34 — Confusion Matrix](..\runs\plot\plain34_confusion_matrix.png)
+![Plain-34 — Loss](../runs/plot/plain34_loss_curve.png)
+![Plain-34 — Accuracy](../runs/plot/plain34_acc_curve.png)
+![Plain-34 — Confusion Matrix](../runs/plot/plain34_confusion_matrix.png)
 
 ### ResNet-34 (dengan residual)
-![ResNet-34 — Loss](..\runs\plot\resnet34_loss_curve.png)
-![ResNet-34 — Accuracy](..\runs\plot\resnet34_acc_curve.png)
-![ResNet-34 — Confusion Matrix](..\runs\plot\resnet34_confusion_matrix.png)
+![ResNet-34 — Loss](../runs/plot/resnet34_loss_curve.png)
+![ResNet-34 — Accuracy](../runs/plot/resnet34_acc_curve.png)
+![ResNet-34 — Confusion Matrix](../runs/plot/resnet34_confusion_matrix.png)
 
 ## Jawaban atas Poin Evaluasi (sesuai instruksi)
 1. **Apakah residual connection mengatasi degradasi?**  
